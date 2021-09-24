@@ -1,0 +1,21 @@
+body{
+     font-family: Helvetica, Arial, Sans-serif;
+}
+
+article{
+     margin: auto;
+     text-align: justify;
+     margin: 0 10px;
+}
+
+.btn{
+     text-align: center;
+     padding: 20px 0;
+}
+
+button{
+     padding: 15px;
+     background-color: #ff7f00;
+     font-size: 20px;
+     border-radius: 20px;
+}
