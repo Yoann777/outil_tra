@@ -4,10 +4,18 @@
 const forty = 40;
 const twenty = 20;
 
+// Test d'un écouteur d'évènement pour améliorer le fichier
+const conversion = document.querySelector('#button');
+
 let visco = () => {
      // On entre la visco à 20°C du produit
      let visco40 = prompt("Quelle est la visco à 40°C du produit?");
-     
+
+     // Si l'utilisateur rentre une valeur avec virgule, on remplace par un point
+     if (visco40.includes(",")) {
+          visco40 = visco40.replace(',', '.');
+     }
+
      if(visco40 >= 2 && visco40<5){
           // Premier calcul pour simplifier le reste du calcul
           let Y = Number(visco40)+0.7+Math.exp(-1.47-1.84*Number(visco40)-0.51*Math.pow(Number(visco40), 2));
@@ -26,4 +34,4 @@ let visco = () => {
      }
 }
 
-
+conversion.addEventListener('click', visco);
