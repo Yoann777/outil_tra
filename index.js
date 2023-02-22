@@ -18,11 +18,11 @@ const display = () => {
         <form>
         <div class="info>
         <label for="visco${i}">Visco bac ${i}</label><br>
-        <input type="text" id="visco40Bac${i}" name="visco${i}"><br>
+        <input type="number" id="visco40Bac${i}" name="visco${i}"><br>
         </div>
         <div class="info">
         <label for="volume${i}">Volume</label><br>
-        <input type="text" id="volumeBac${i}" name="volume${i}">
+        <input type="number" id="volumeBac${i}" name="volume${i}">
         </div>
         </form>
         </div>
