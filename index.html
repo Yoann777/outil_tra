@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Calcul Visco sur bac simple</title>
-     <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-     <article>
-          <h1>
-               Conversion de la viscosité des gasoil de 40°C à 20°C
-          </h1>
-          <p>
-               Salut les gars, <br />
-               J'ai fait un petit fichier web pour les conversions des visco des GO/GB. Pour le moment, il n'y a que la conversion de la visco pour un seul bac. La suite viendra, le temps que je puisse améliorer mes compétences dans le langage de programmation utilisé pour ce fichier
-          </p>
-     </article>
-     <article>
-          <h2>
-               Viscosité
-          </h2>
-          <p>Enjoy :)</p>
+    <h1>Calcul visco plusieurs bacs</h1>
 
-          <div class="btn">
-               <input type="button" id="button" value="Conversion visco">
-          </div>
-     </article>
+    <div class="container">
+        <label for="numberOfTank">Nombre de bacs:</label>
+        
+        <select name="tank" id="numberOfTank">
+            <option>--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        
+        <input type="button" id="displayTank" value="GO">
+        <input type="button" id="oups" value="Reset">
+    </div>
 
-     <script src="./index.js"></script>
+    <div>
+        <p id="pumpingTank"></p>
+    </div>
+    <div class='btn'>
+        
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
