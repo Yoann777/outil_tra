@@ -1,21 +1,18 @@
-body{
-     font-family: Helvetica, Arial, Sans-serif;
+* {
+    letter-spacing: 0.8px;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
 }
-
-article{
-     margin: auto;
-     text-align: justify;
-     margin: 0 10px;
+#pumpingTank {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-
-.btn{
-     text-align: center;
-     padding: 20px 0;
+.tank {
+    border: 1px solid red;
+    padding: 0 20px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
-
-#button{
-     padding: 15px;
-     background-color: #ff7f00;
-     font-size: 20px;
-     border-radius: 20px;
+.info {
+    padding-top: 10px;
 }
