@@ -2,17 +2,48 @@
     letter-spacing: 0.8px;
     font-family: 'Helvetica', 'Arial', 'sans-serif';
 }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
 #pumpingTank {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .tank {
-    border: 1px solid red;
+    /* border: 1px solid blue; */
     padding: 0 20px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
+    margin: 20px 0 20px 0;
+    border-radius: 10px;
 }
 .info {
     padding-top: 10px;
+}
+.btn {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px 10px;
+    width: 80px;
+    background-color: rgba(0, 0, 255, .5);
+    color: white;
+}
+.btn:hover {
+    background-color: rgba(0, 255, 0, .5);
+    color: black;
+    transition: all .4s;
+}
+.btn-calc {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.title {
+    font-weight: bold;
+}
+#pumpingTank {
+    background-color: rgba(0, 0, 255, .1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
 }
