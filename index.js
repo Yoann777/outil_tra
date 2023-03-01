@@ -3,7 +3,7 @@ let tanks = document.querySelector("#numberOfTank");
 const displayTank = document.querySelector("#displayTank");
 const oupsBtn = document.querySelector("#oups");
 const pumpingTank = document.querySelector("#pumpingTank");
-const calculateVisco = document.querySelector('.btn');
+const calculateVisco = document.querySelector('.calculateVisco');
 
 const forty = 40;
 const twenty = 20;
@@ -14,14 +14,14 @@ const display = () => {
     for (let i = 1; i <= tanks; i++) {
         pumpingTank.innerHTML += `
         <div class="tank">
-        <p>Bac ${i}</p>
+        <p class="title">Bac ${i} :</p>
         <form>
         <div class="info>
         <label for="visco${i}">Visco bac ${i}</label><br>
         <input type="number" id="visco40Bac${i}" name="visco${i}"><br>
         </div>
         <div class="info">
-        <label for="volume${i}">Volume</label><br>
+        <label for="volume${i}">Volume compteur</label><br>
         <input type="number" id="volumeBac${i}" name="volume${i}">
         </div>
         </form>
@@ -30,7 +30,7 @@ const display = () => {
     };
     
     calculateVisco.innerHTML = `
-        <input type="button" id="calculVisco" value="Calculer">
+        <input type="button" id="calculVisco" value="Calculer" class="btn btn-calc">
     `;
 }
 
@@ -65,13 +65,13 @@ const calcul = () => {
                 visco(visco40);
                 // alert('visco et volume OK');
             } else {
-                alert("Attention, au moins un des volume n'est pas bon!");
+                alert("Attention, au moins un des volume n'est pas bon !");
             }
         } else {
-            alert ("Attention, au moins une des visco n'est pas bonne!");
+            alert ("Attention, au moins une des visco n'est pas bonne !");
             if (volumeBac1 < volumeBac2 && volumeBac2 < volumeBac3 && volumeBac3 < volumeBac4) {
             } else {
-                alert("Les visco et les volumes ne sont pas bons!");
+                alert("Les visco et les volumes ne sont pas bons !");
             }
         }
 
@@ -99,13 +99,13 @@ const calcul = () => {
                 visco(visco40);
                 // alert('visco et volume OK');
             } else {
-                alert("Attention, au moins un des volume n'est pas bon!");
+                alert("Attention, au moins un des volume n'est pas bon !");
             }
         } else {
-            alert ("Attention, au moins une des visco n'est pas bonne!");
+            alert ("Attention, au moins une des visco n'est pas bonne !");
             if (volumeBac1 < volumeBac2 && volumeBac2 < volumeBac3 && volumeBac3 < volumeBac4) {
             } else {
-                alert("Les visco et les volumes ne sont pas bons!");
+                alert("Les visco et les volumes ne sont pas bons !");
             }
         }
 
@@ -129,13 +129,13 @@ const calcul = () => {
                 visco(visco40);
                 // alert('visco et volume OK');
             } else {
-                alert("Attention, au moins un des volume n'est pas bon!");
+                alert("Attention, au moins un des volume n'est pas bon !");
             }
         } else {
-            alert ("Attention, au moins une des visco n'est pas bonne!");
+            alert ("Attention, au moins une des visco n'est pas bonne !");
             if (volumeBac1 < volumeBac2 && volumeBac2 < volumeBac3 && volumeBac3 < volumeBac4) {
             } else {
-                alert("Les visco et les volumes ne sont pas bons!");
+                alert("Les visco et les volumes ne sont pas bons !");
             }
         }
 
@@ -155,13 +155,13 @@ const calcul = () => {
                 visco(visco40);
                 // alert('visco et volume OK');
             } else {
-                alert("Attention, au moins un des volume n'est pas bon!");
+                alert("Attention, au moins un des volume n'est pas bon !");
             }
         } else {
-            alert ("Attention, au moins une des visco n'est pas bonne!");
+            alert ("Attention, au moins une des visco n'est pas bonne !");
             if (volumeBac1 < volumeBac2 && volumeBac2 < volumeBac3 && volumeBac3 < volumeBac4) {
             } else {
-                alert("Les visco et les volumes ne sont pas bons!");
+                alert("Les visco et les volumes ne sont pas bons !");
             }
         }
 
