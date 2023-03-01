@@ -8,28 +8,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Calcul visco plusieurs bacs</h1>
-
     <div class="container">
-        <label for="numberOfTank">Nombre de bacs:</label>
-        
-        <select name="tank" id="numberOfTank">
-            <option>--</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        
-        <input type="button" id="displayTank" value="GO">
-        <input type="button" id="oups" value="Reset">
-    </div>
 
-    <div>
-        <p id="pumpingTank"></p>
-    </div>
-    <div class='btn'>
+        <h1>Calcul visco</h1>
         
+        <div class="container">
+            <label for="numberOfTank">Nombre de bacs:</label>
+            
+            <select name="tank" id="numberOfTank">
+                <option>--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            
+            <input type="button" id="displayTank" value="Valider" class="btn">
+            <input type="button" id="oups" value="Reset" class="btn">
+        </div>
+        
+        <div>
+            <p id="pumpingTank"></p>
+        </div>
+        <div class="calculateVisco">
+            
+        </div>
     </div>
 
     <script src="./index.js"></script>
