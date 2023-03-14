@@ -11,23 +11,39 @@ const twenty = 20;
 // Fonction display pour afficher le nombre de bacs voulu en bouclant
 const display = () => {
     tanks = tanks.value;
-    for (let i = 1; i <= tanks; i++) {
-        pumpingTank.innerHTML += `
-        <div class="tank">
-        <p class="title">Bac ${i} :</p>
-        <form>
-        <div class="info>
-        <label for="visco${i}">Visco bac ${i}</label><br>
-        <input type="number" id="visco40Bac${i}" name="visco${i}"><br>
-        </div>
-        <div class="info">
-        <label for="volume${i}">Volume compteur</label><br>
-        <input type="number" id="volumeBac${i}" name="volume${i}">
-        </div>
-        </form>
-        </div>
-        `;
-    };
+    if (tanks == 1) {
+        for (let i = 1; i <= tanks; i++) {
+            pumpingTank.innerHTML += `
+            <div class="tank">
+            <p class="title">Bac ${i} :</p>
+            <form>
+            <div class="info>
+            <label for="visco${i}">Visco bac ${i}</label><br>
+            <input type="number" id="visco40Bac${i}" name="visco${i}"><br>
+            </div>
+            </form>
+            </div>
+            `;
+        };
+    } else {
+        for (let i = 1; i <= tanks; i++) {
+            pumpingTank.innerHTML += `
+            <div class="tank">
+            <p class="title">Bac ${i} :</p>
+            <form>
+            <div class="info>
+            <label for="visco${i}">Visco bac ${i}</label><br>
+            <input type="number" id="visco40Bac${i}" name="visco${i}"><br>
+            </div>
+            <div class="info">
+            <label for="volume${i}">Volume compteur</label><br>
+            <input type="number" id="volumeBac${i}" name="volume${i}">
+            </div>
+            </form>
+            </div>
+            `;
+        };
+    }
     
     calculateVisco.innerHTML = `
         <input type="button" id="calculVisco" value="Calculer" class="btn btn-calc">
@@ -142,31 +158,21 @@ const calcul = () => {
     } else if (document.querySelector("#visco40Bac1")) {
         let visco40Bac1 = document.querySelector('#visco40Bac1').value;
 
-        let volumeBac1 = document.querySelector('#volumeBac1').value;
+        // let volumeBac1 = document.querySelector('#volumeBac1').value;
 
         if (visco40Bac1.includes(",")) {
             visco40Bac1 = visco40Bac1.replace(",", ".");
         }
         
         if ((Number(visco40Bac1) >= 2 && Number(visco40Bac1) <= 4.5)) {
-            if (Number(volumeBac1)) {                                
-                
                 let visco40 = Number(visco40Bac1);
                 visco(visco40);
-                // alert('visco et volume OK');
-            } else {
-                alert("Attention, au moins un des volume n'est pas bon !");
-            }
         } else {
             alert ("Attention, au moins une des visco n'est pas bonne !");
-            if (volumeBac1 < volumeBac2 && volumeBac2 < volumeBac3 && volumeBac3 < volumeBac4) {
-            } else {
-                alert("Les visco et les volumes ne sont pas bons !");
-            }
         }
 
     } else {
-        console.log("Pas de bacs selectionnés");
+        alert("Pas de bacs selectionnés");
     }
 
 }
