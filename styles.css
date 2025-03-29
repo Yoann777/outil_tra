@@ -5,16 +5,22 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     text-align: center;
-    letter-spacing: 1.5px;;
+    letter-spacing: 1.5px;
 }
 
+.note {
+	text-align: justify;
+}
 
 h2 {
     margin-bottom: 20px;
 }
 
-label {
-    font-weight: bold;
+select {
+    border-color: #ff7f00;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 input {
@@ -28,18 +34,21 @@ button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background: #007bff;
-    color: white;
+    background: #ff7f00;
+    color: black;
     border: none;
     cursor: pointer;
 	border-radius: 5px;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	font-weight: bold;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #000000;
+    color: #ff7f00;
 }
 
-/* Styles pour la popup */
 /* Styles pour la popup */
 .popup {
     display: none;
@@ -49,11 +58,12 @@ button:hover {
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
-    border: 2px solid #333;
+    border: 2px solid #ff7f00;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     text-align: center;
-    width: 300px;
+    max-width: 700px;
+    width: 400px;
 	border-radius: 5px;
 }
 
@@ -81,19 +91,18 @@ button:hover {
 /* Conteneur pour les champs de volume et viscosité */
 .conteneurVisco {
 	margin-top: 30px;
-    background-color: rgba(0,0,255,0.1);  /* Choisir la couleur de fond souhaitée */
+    background-color: rgba(255,127,0,0.2);  /* Choisir la couleur de fond souhaitée */
     border-radius: 8px;          /* Bord arrondi */
     padding: 10px;               /* Espacement interne */
     margin-bottom: 15px;         /* Espacement entre les champs */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour plus de profondeur */
 	display: flex;
 	flex-direction: column;
-	 align-items: center;
+	align-items: center;
 }
 
 /* Styles des labels et inputs */
 .conteneurVisco label {
-    font-weight: bold;
     margin-right: 10px;
 }
 
@@ -107,6 +116,8 @@ button:hover {
 }
 
 .conteneurVisco input:focus {
-    border-color: #0056b3; /* Change la couleur de la bordure quand l'input est sélectionné */
+    border-color: #ff7f00; /* Change la couleur de la bordure quand l'input est sélectionné */
     outline: none;         /* Retirer le contour par défaut */
 }
+
+
