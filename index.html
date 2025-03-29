@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Calcul de la Viscosité</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <h2>Calcul de la Viscosité Moyenne</h2>
 
-        <h1>Calcul visco</h1>
-        
-        <div class="container">
-            <label for="numberOfTank">Nombre de bacs:</label>
-            
-            <select name="tank" id="numberOfTank">
-                <option>--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            
-            <input type="button" id="displayTank" value="Valider" class="btn">
-            <input type="button" id="oups" value="Reset" class="btn">
-        </div>
-        
-        <div>
-            <p id="pumpingTank"></p>
-        </div>
-        <div class="calculateVisco">
-            
+    <label for="bacCount">Nombre de bacs :</label>
+    <select id="bacCount" onchange="generateFields()">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <div id="inputContainer">
+        <!-- Les champs seront générés ici -->
+    </div>
+
+    <button onclick="calculateViscosity()">Calculer</button>
+
+    <div id="popup" class="popup">
+		<span class="close" onclick="closePopup()">Fermer X</span>
+        <div class="popup-content">
+            <!-- <span class="close" onclick="closePopup()">X</span> -->
+            <div id="popupResult"></div>
         </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
