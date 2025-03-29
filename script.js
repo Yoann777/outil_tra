@@ -8,19 +8,38 @@ function generateFields() {
     let bacCount = document.getElementById("bacCount").value;
     let container = document.getElementById("inputContainer");
     container.innerHTML = "";
-
-    for (let i = 1; i <= bacCount; i++) {
-			
-		let inputHTML = `
+    
+    if (bacCount == 1) {
+        let i = 1;
+        let inputHTML = `
             <div class="conteneurVisco">
-				<label for="volume${i}">Volume lu au compteur :</label>
-				<input type="number" id="volume${i}" required>
-			
-				<label for="visco${i}">Viscosité, à 40°C, du bac ${i} :</label>
-				<input type="number" id="visco${i}" required>
+                <label for="volume${i}" class="bacUnique">Volume lu au compteur :</label>
+				<input type="number" id="volume${i}" value="1000"  class="bacUnique" required>
+
+                <label for="visco${i}">Viscosité, à 40°C, du bac :</label>
+                <input type="number" id="visco${i}" required>
             </div>
         `;
         container.innerHTML += inputHTML;
+        document.querySelectorAll(".bacUnique").forEach(element => {
+            element.style.display = "none";
+        })
+        
+    } else {
+
+        for (let i = 1; i <= bacCount; i++) {
+			
+		    let inputHTML = `
+                <div class="conteneurVisco">
+				    <label for="volume${i}">Volume lu au compteur :</label>
+				    <input type="number" id="volume${i}" required>
+			
+				    <label for="visco${i}">Viscosité, à 40°C, du bac ${i} :</label>
+				    <input type="number" id="visco${i}" required>
+                </div>
+            `;
+            container.innerHTML += inputHTML;
+        }
     }
 }
 
