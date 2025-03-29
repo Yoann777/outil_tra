@@ -13,6 +13,7 @@ function generateFields() {
         let i = 1;
         let inputHTML = `
             <div class="conteneurVisco">
+                <h3>Bac ${i}</h3>
                 <label for="volume${i}" class="bacUnique">Volume lu au compteur :</label>
 				<input type="number" id="volume${i}" value="1000"  class="bacUnique" required>
 
@@ -31,7 +32,8 @@ function generateFields() {
 			
 		    let inputHTML = `
                 <div class="conteneurVisco">
-				    <label for="volume${i}">Volume lu au compteur :</label>
+                    <h3>Bac ${i}</h3>
+				    <label for="volume${i}">Volume expédié :</label>
 				    <input type="number" id="volume${i}" required>
 			
 				    <label for="visco${i}">Viscosité, à 40°C, du bac ${i} :</label>
@@ -39,6 +41,7 @@ function generateFields() {
                 </div>
             `;
             container.innerHTML += inputHTML;
+
         }
     }
 }
