@@ -13,7 +13,6 @@ function generateFields() {
         let i = 1;
         let inputHTML = `
             <div class="conteneurVisco">
-                <h3>Bac ${i}</h3>
                 <label for="volume${i}" class="bacUnique">Volume lu au compteur :</label>
 				<input type="number" id="volume${i}" value="1000"  class="bacUnique" required>
 
