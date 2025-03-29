@@ -1,0 +1,112 @@
+@media screen and (min-width: 700px){
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+	font-size: 16px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+	border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Styles pour la popup */
+/* Styles pour la popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+	border-radius: 5px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close:hover {
+    background-color: #c9302c;
+}
+
+/* Conteneur pour les champs de volume et viscosité */
+.conteneurVisco {
+	margin-top: 30px;
+    background-color: rgba(0,0,255,0.1);  /* Choisir la couleur de fond souhaitée */
+    border-radius: 8px;          /* Bord arrondi */
+    padding: 10px;               /* Espacement interne */
+    margin-bottom: 15px;         /* Espacement entre les champs */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour plus de profondeur */
+	display: flex;
+	flex-direction: column;
+	 align-items: center;
+}
+
+/* Styles des labels et inputs */
+.conteneurVisco label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.conteneurVisco input {
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.conteneurVisco input:focus {
+    border-color: #0056b3; /* Change la couleur de la bordure quand l'input est sélectionné */
+    outline: none;         /* Retirer le contour par défaut */
+}
