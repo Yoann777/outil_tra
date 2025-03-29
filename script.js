@@ -13,7 +13,7 @@ function generateFields() {
 			
 		let inputHTML = `
             <div class="conteneurVisco">
-				<label for="volume${i}">Volume du bac ${i} :</label>
+				<label for="volume${i}">Volume au compteur ${i} :</label>
 				<input type="number" id="volume${i}" required>
 			
 				<label for="visco${i}">Viscosité, à 40°C, du bac ${i} :</label>
