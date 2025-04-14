@@ -24,6 +24,10 @@ select {
     outline: none;
 }
 
+select:focus {
+    outline: 2px solid #ff7f00;
+}
+
 input {
     width: 100px;
     padding: 5px;
